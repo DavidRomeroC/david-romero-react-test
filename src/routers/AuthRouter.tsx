@@ -7,7 +7,7 @@ export const AuthRouter = () => {
         <div>
             <Routes>
 
-                <Route path="/home" element={< HomeScreen />} />
+                <Route path="/" element={< HomeScreen />} />
                 
                 <Route path="/login" element={< LoginScreen />} />
 

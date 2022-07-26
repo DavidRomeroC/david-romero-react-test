@@ -80,11 +80,15 @@ export const Upload = () => {
         navigate(`/employees`)
     }
 
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+    }
+
     return (
         <div>
             <div className="file-upload">
                 <h2>Drag and drop</h2>
-                <form className="" encType="multipart /form-data">
+                <form encType="multipart /form-data">
                     <div className="custom-form-group">
                         <div className={highLight ? "custom-file-drop-area highlight" : "custom-file-drop-area"} 
                         onDragEnter={handleHighLight} 
@@ -104,7 +108,7 @@ export const Upload = () => {
                             ))}
                         </div>
                     </div>
-                    <button type="submit" className="btn-submit">Submit</button>
+                    <button onClick={handleSubmit} type="submit" className="btn-submit">Submit</button>
                 </form>
                 <button onClick={handleReturn} className="btn-return" >Regresar</button>
             </div>
